@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Find Blood Donor | BloodConnect</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+
+            <div class="logo-symbol">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <span>+</span>
+            </div>
+
+            <div class="logo-name">
+                <h2>Blood<span>Connect</span></h2>
+                <p>Donate • Find • Save Lives</p>
+            </div>
+
+        </a>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="donor.html" class="active">Donor</a>
+            <a href="emergency.html">Emergency</a>
+            <a href="hospitals.html">Hospitals</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-buttons">
+            <a href="login.html">
+                <i class="fa-solid fa-user"></i> Login
+            </a>
+
+            <a href="signup.html">
+                <i class="fa-solid fa-pen"></i> Sign Up
+            </a>
+        </div>
+
+    </header>
+
+
+    <!-- MAIN DONOR PAGE -->
+
+    <main class="donor-page">
+
+        <section class="donor-section">
+
+            <!-- LEFT CONTENT -->
+
+            <div class="donor-content">
+
+                <span class="donor-badge">
+                    Find Blood Donor
+                </span>
+
+                <h1>
+                    Need Blood?<br>
+                    <span>Find a Donor</span> Nearby
+                </h1>
+
+                <p>
+                    Search for verified blood donors by<br class="desktop-break">
+                    blood group and location.
+                </p>
+
+
+                <!-- SEARCH FORM -->
+
+                <form class="donor-search" id="donorForm">
+
+                    <div class="blood-select">
+
+                        <select id="bloodGroup" required>
+                            <option value="" selected disabled>
+                                Select Blood Group
+                            </option>
+
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                        </select>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </div>
+
+
+                    <div class="location-input">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <input
+                            type="text"
+                            id="location"
+                            placeholder="Your Location"
+                            required
+                        >
+
+                    </div>
+
+
+                    <button type="submit" class="search-button">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Search
+
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- RIGHT VISUAL -->
+
+            <div class="donor-image">
+
+                <div class="pink-shape"></div>
+
+
+                <!-- BLOOD BAG -->
+
+                <svg class="blood-bag"
+                     viewBox="0 0 180 250"
+                     xmlns="http://www.w3.org/2000/svg">
+
+                    <defs>
+
+                        <linearGradient id="bagRed" x1="0" y1="0" x2="1" y2="0">
+                            <stop offset="0%" stop-color="#f20a25"/>
+                            <stop offset="50%" stop-color="#d40020"/>
+                            <stop offset="100%" stop-color="#a90019"/>
+                        </linearGradient>
+
+                        <filter id="bagShadow">
+                            <feDropShadow dx="0" dy="5" stdDeviation="5"
+                                flood-color="#99001b" flood-opacity=".25"/>
+                        </filter>
+
+                    </defs>
+
+
+                    <!-- Top connector -->
+
+                    <rect x="65" y="8" width="50" height="13"
+                          rx="5" fill="#e6aab6"/>
+
+                    <rect x="73" y="1" width="34" height="11"
+                          rx="4" fill="#f4dce2"
+                          stroke="#d7a1ad" stroke-width="3"/>
+
+
+                    <!-- Bag handle -->
+
+                    <path d="M75 21 L75 31 Q75 36 81 36
+                             L99 36 Q105 36 105 31 L105 21"
+                          fill="none"
+                          stroke="#d7a1ad"
+                          stroke-width="5"/>
+
+
+                    <!-- Main bag -->
+
+                    <path d="M48 34 Q40 34 40 46
+                             L40 183 Q40 204 58 208
+                             L122 208 Q140 204 140 183
+                             L140 46 Q140 34 132 34 Z"
+                          fill="url(#bagRed)"
+                          stroke="#e8a9b5"
+                          stroke-width="7"
+                          filter="url(#bagShadow)"/>
+
+
+                    <!-- Shine -->
+
+                    <path d="M51 48 L59 48 L59 181
+                             Q59 190 51 190 Z"
+                          fill="#ffffff"
+                          opacity=".25"/>
+
+
+                    <!-- White label -->
+
+                    <rect x="54" y="83" width="72" height="69"
+                          rx="8" fill="#ffffff"/>
+
+
+                    <!-- Blood drop -->
+
+                    <path d="M90 94
+                             C83 107 73 119 73 127
+                             A17 17 0 0 0 107 127
+                             C107 119 97 107 90 94 Z"
+                          fill="#c90020"/>
+
+
+                    <!-- Bottom tube -->
+
+                    <rect x="77" y="207" width="26" height="12"
+                          rx="4" fill="#d8a0ac"/>
+
+                    <rect x="85" y="217" width="10" height="19"
+                          rx="3" fill="#c90020"/>
+
+                    <path d="M90 235 L90 243"
+                          stroke="#c90020"
+                          stroke-width="4"
+                          stroke-linecap="round"/>
+
+                </svg>
+
+
+                <!-- HEART OUTLINE -->
+
+                <svg class="heart-design"
+                     viewBox="0 0 110 100"
+                     xmlns="http://www.w3.org/2000/svg">
+
+                    <path d="M55 88
+                             C45 77 8 51 8 29
+                             C8 2 42 -2 55 23
+                             C68 -2 102 2 102 29
+                             C102 51 65 77 55 88 Z"
+                          fill="none"
+                          stroke="#c90020"
+                          stroke-width="4"
+                          stroke-linecap="round"/>
+
+                </svg>
+
+
+                <!-- CONNECTING LINE -->
+
+                <svg class="heart-tube"
+                     viewBox="0 0 250 100"
+                     xmlns="http://www.w3.org/2000/svg">
+
+                    <path d="M5 25
+                             C60 25 70 25 95 25
+                             C120 25 140 80 175 80
+                             C210 80 220 25 245 25"
+                          fill="none"
+                          stroke="#c90020"
+                          stroke-width="3"
+                          stroke-linecap="round"/>
+
+                </svg>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- DEMO SEARCH FUNCTION -->
+
+    <script>
+
+        document.getElementById("donorForm").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const group = document.getElementById("bloodGroup").value;
+            const location = document.getElementById("location").value.trim();
+
+            if (group && location) {
+
+                alert(
+                    "Blood Group: " + group +
+                    "\nLocation: " + location +
+                    "\nDonor search will be connected to the database."
+                );
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>

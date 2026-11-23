@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Donor Details | BloodConnect</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+
+            <div class="logo-symbol">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <span>+</span>
+            </div>
+
+            <div class="logo-name">
+                <h2>Blood<span>Connect</span></h2>
+                <p>Donate • Find • Save Lives</p>
+            </div>
+
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="donor.html" class="active">Donor</a>
+            <a href="emergency.html">Emergency</a>
+            <a href="hospitals.html">Hospitals</a>
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+
+        <div class="nav-buttons">
+
+            <a href="login.html">
+                <i class="fa-solid fa-user"></i>
+                Login
+            </a>
+
+            <a href="signup.html">
+                <i class="fa-solid fa-pen"></i>
+                Sign Up
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- DONOR DETAILS SECTION -->
+
+    <main class="details-page">
+
+        <section class="details-container">
+
+            <!-- BACK BUTTON -->
+
+            <a href="donors.html" class="back-button">
+
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Donors
+
+            </a>
+
+
+            <!-- MAIN DONOR CARD -->
+
+            <div class="details-card">
+
+
+                <!-- LEFT PROFILE SECTION -->
+
+                <div class="profile-section">
+
+                    <div class="profile-image">
+
+                        <img
+                            id="donorImage"
+                            src="https://randomuser.me/api/portraits/men/32.jpg"
+                            alt="Donor Profile Picture"
+                        >
+
+                    </div>
+
+
+                    <div class="availability">
+
+                        <i class="fa-solid fa-circle-check"></i>
+                        Available Now
+
+                    </div>
+
+
+                    <a href="tel:+923001234567"
+                       class="contact-button"
+                       id="contactButton">
+
+                        <i class="fa-solid fa-phone"></i>
+                        Contact Donor
+
+                    </a>
+
+                </div>
+
+
+                <!-- RIGHT INFORMATION SECTION -->
+
+                <div class="information-section">
+
+
+                    <!-- DONOR NAME -->
+
+                    <div class="donor-name">
+
+                        <h1 id="donorName">Ahmed Khan</h1>
+
+                        <i class="fa-solid fa-circle-check verified"></i>
+
+                    </div>
+
+
+                    <!-- DONOR INFORMATION -->
+
+                    <div class="information-list">
+
+
+                        <div class="info-item">
+
+                            <i class="fa-solid fa-droplet"></i>
+
+                            <p>
+                                <strong>Blood Group:</strong>
+                                <span id="bloodGroup">A+</span>
+                            </p>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <p>
+                                <strong>Location:</strong>
+                                <span id="donorLocation">Lahore</span>
+                            </p>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            <p>
+                                <strong>Phone:</strong>
+                                <span id="donorPhone">+92 300 1234567</span>
+                            </p>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <i class="fa-solid fa-calendar-days"></i>
+
+                            <p>
+                                <strong>Last Donation:</strong>
+                                <span id="lastDonation">3 Months Ago</span>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ABOUT ME -->
+
+                    <div class="about-donor">
+
+                        <h2>About Me:</h2>
+
+                        <p id="donorAbout">
+
+                            I am a regular donor and ready to help
+                            whenever needed. Stay healthy and donate
+                            blood for a better tomorrow.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        // GET DONOR INFORMATION FROM URL
+
+        const params = new URLSearchParams(window.location.search);
+
+        const name = params.get("name") || "Ahmed Khan";
+        const group = params.get("group") || "A+";
+        const location = params.get("location") || "Lahore";
+        const phone = params.get("phone") || "+92 300 1234567";
+        const donation = params.get("donation") || "3 Months Ago";
+
+        const image = params.get("image") ||
+            "https://randomuser.me/api/portraits/men/32.jpg";
+
+
+        // DISPLAY DONOR INFORMATION
+
+        document.getElementById("donorName").textContent = name;
+
+        document.getElementById("bloodGroup").textContent = group;
+
+        document.getElementById("donorLocation").textContent = location;
+
+        document.getElementById("donorPhone").textContent = phone;
+
+        document.getElementById("lastDonation").textContent = donation;
+
+        document.getElementById("donorImage").src = image;
+
+
+        // CONTACT BUTTON
+
+        document.getElementById("contactButton").href =
+            "tel:" + phone.replace(/\s/g, "");
+
+    </script>
+
+</body>
+</html>

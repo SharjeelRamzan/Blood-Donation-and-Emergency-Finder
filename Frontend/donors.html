@@ -1,0 +1,402 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Available Donors | BloodConnect</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            <div class="logo-symbol">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <span>+</span>
+            </div>
+
+            <div class="logo-name">
+                <h2>Blood<span>Connect</span></h2>
+                <p>Donate • Find • Save Lives</p>
+            </div>
+        </a>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="donor.html" class="active">Donor</a>
+            <a href="emergency.html">Emergency</a>
+            <a href="hospitals.html">Hospitals</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-buttons">
+            <a href="login.html">
+                <i class="fa-solid fa-user"></i> Login
+            </a>
+
+            <a href="signup.html">
+                <i class="fa-solid fa-pen"></i> Sign Up
+            </a>
+        </div>
+
+    </header>
+
+
+    <!-- AVAILABLE DONORS MAIN SECTION -->
+
+    <main class="donors-page">
+
+        <section class="donors-section">
+
+            <!-- TOP HEADING AND FILTERS -->
+
+            <div class="donors-top">
+
+                <div class="heading-area">
+
+                    <a href="index.html" class="back-home">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Back to Home
+                    </a>
+
+                    <h1>
+                        Available <span>Donors</span>
+                    </h1>
+
+                    <p>
+                        Here are the matching donors for your search.
+                    </p>
+
+                </div>
+
+
+                <!-- BLOOD GROUP FILTERS -->
+
+                <div class="filter-buttons">
+
+                    <button class="filter-btn active" data-group="All">
+                        All
+                    </button>
+
+                    <button class="filter-btn" data-group="A+">
+                        A+
+                    </button>
+
+                    <button class="filter-btn" data-group="B+">
+                        B+
+                    </button>
+
+                    <button class="filter-btn" data-group="O+">
+                        O+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- DONOR LIST -->
+
+            <div class="donor-list">
+
+
+                <!-- DONOR 1 -->
+
+                <article class="donor-card" data-group="A+">
+
+                    <div class="donor-profile">
+
+                        <img
+                            src="https://randomuser.me/api/portraits/men/32.jpg"
+                            alt="Ahmed Khan profile picture"
+                        >
+
+                    </div>
+
+                    <div class="donor-info">
+
+                        <h2>
+                            Ahmed Khan
+                            <i class="fa-solid fa-circle-check verified"></i>
+                        </h2>
+
+                        <div class="donor-location">
+
+                            <span>
+                                <i class="fa-solid fa-droplet"></i>
+                                A+
+                            </span>
+
+                            <span class="dot">•</span>
+
+                            <span>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Lahore
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="donation-info">
+
+                        <h3>Last Donation:</h3>
+                        <p>3 Months Ago</p>
+
+                    </div>
+
+
+                    <div class="availability">
+
+                        <i class="fa-solid fa-circle-check"></i>
+                        Available Now
+
+                    </div>
+
+
+                    <button class="details-btn"
+                       onclick="showDetails('Ahmed Khan','A+','Lahore','3 Months Ago','+92 300 1234567','https://randomuser.me/api/portraits/men/32.jpg')">
+
+                        View Details
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </article>
+
+
+
+                <!-- DONOR 2 -->
+
+                <article class="donor-card" data-group="O+">
+
+                    <div class="donor-profile">
+
+                        <img
+                            src="https://randomuser.me/api/portraits/women/44.jpg"
+                            alt="Ayesha Malik profile picture"
+                        >
+
+                    </div>
+
+                    <div class="donor-info">
+
+                        <h2>
+                            Ayesha Malik
+                            <i class="fa-solid fa-circle-check verified"></i>
+                        </h2>
+
+                        <div class="donor-location">
+
+                            <span>
+                                <i class="fa-solid fa-droplet"></i>
+                                O+
+                            </span>
+
+                            <span class="dot">•</span>
+
+                            <span>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Lahore
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="donation-info">
+
+                        <h3>Last Donation:</h3>
+                        <p>4 Months Ago</p>
+
+                    </div>
+
+
+                    <div class="availability">
+
+                        <i class="fa-solid fa-circle-check"></i>
+                        Available Now
+
+                    </div>
+
+
+                    <button class="details-btn"
+                     onclick="showDetails('Ayesha Malik','O+','Lahore','4 Months Ago','+92 300 1234567','https://randomuser.me/api/portraits/women/44.jpg')">  
+
+                        View Details
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </article>
+
+
+
+                <!-- DONOR 3 -->
+
+                <article class="donor-card" data-group="B+">
+
+                    <div class="donor-profile">
+
+                        <img
+                            src="https://randomuser.me/api/portraits/men/75.jpg"
+                            alt="Usman Raza profile picture"
+                        >
+
+                    </div>
+
+                    <div class="donor-info">
+
+                        <h2>
+                            Usman Raza
+                            <i class="fa-solid fa-circle-check verified"></i>
+                        </h2>
+
+                        <div class="donor-location">
+
+                            <span>
+                                <i class="fa-solid fa-droplet"></i>
+                                B+
+                            </span>
+
+                            <span class="dot">•</span>
+
+                            <span>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Lahore
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="donation-info">
+
+                        <h3>Last Donation:</h3>
+                        <p>2 Months Ago</p>
+
+                    </div>
+
+
+                    <div class="availability">
+
+                        <i class="fa-solid fa-circle-check"></i>
+                        Available Now
+
+                    </div>
+
+
+                    <button class="details-btn"
+                        onclick="showDetails('Usman Raza','B+','Lahore','2 Months Ago','+92 300 1234567','https://randomuser.me/api/portraits/men/75.jpg')">
+
+                        View Details
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </article>
+
+
+            </div>
+
+            <p class="no-donors" id="noDonors">
+                No donors found for this blood group.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        // BLOOD GROUP FILTER
+
+        const filterButtons = document.querySelectorAll(".filter-btn");
+
+        const donorCards = document.querySelectorAll(".donor-card");
+
+        const noDonors = document.getElementById("noDonors");
+
+
+        filterButtons.forEach(button => {
+
+            button.addEventListener("click", function() {
+
+                filterButtons.forEach(btn => {
+                    btn.classList.remove("active");
+                });
+
+                this.classList.add("active");
+
+                const selectedGroup = this.dataset.group;
+
+                let visibleCount = 0;
+
+                donorCards.forEach(card => {
+
+                    if (
+                        selectedGroup === "All" ||
+                        card.dataset.group === selectedGroup
+                    ) {
+
+                        card.style.display = "flex";
+                        visibleCount++;
+
+                    } else {
+
+                        card.style.display = "none";
+
+                    }
+
+                });
+
+                noDonors.style.display =
+                    visibleCount === 0 ? "block" : "none";
+
+            });
+
+        });
+
+
+        // VIEW DONOR DETAILS
+
+       function showDetails(name, group, location, donation, phone, image) {
+
+    const params = new URLSearchParams({
+        name: name,
+        group: group,
+        location: location,
+        donation: donation,
+        phone: phone,
+        image: image
+    });
+
+    window.location.href = "donor-details.html?" + params.toString();
+
+}
+
+    </script>
+
+</body>
+</html>
